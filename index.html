@@ -4,8 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GONOW</title>
+    <link rel="stylesheet" href="GONOW.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./GONOW.js"></script>
 </head>
 <body>
+    <header>
+        <div class="top">
+            <div class="logowhere">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./GONOW_img/header_logo.png" alt="로고">
+                    </a>
+                </h1>
+                <input type="text" id="where" placeholder="어디로 떠나세요?">
+            </div>
+            <nav id="menu">
+                <ul id="top_menu">
+                    <li><a href="#">정재희님 |</a></li>
+                    <li><a href="#">회원가입 |</a></li>
+                    <li><a href="#">로그아웃 </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> <!-- header끝 -->
+
+
+    <nav class="menu1">
+        <ul class="navi">
+            <li>
+                <a href="#">숙소</a>
+                <ul class="submenu">
+                    <li><a href="#">럭셔리 다이렉트</a></li>
+                    <li><a href="#">리조트 다이렉트</a></li>
+                    <li><a href="#">일본 다이렉트</a></li>
+                    <li><a href="#">럭셔리 셀렉트</a></li>
+                    <li><a href="#">료칸 전문관</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">투어&티켓</a>
+                <ul class="submenu">
+                    <li><a href="#">유니버설 스튜디오 재팬</a></li>
+                    <li><a href="#">일본 버스투어 가이드</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">패키지</a>
+                <ul class="submenu">
+                    <li><a href="#">해외여행</a></li>
+                    <li><a href="#">국내여행</a></li>
+                    <li><a href="#">지방출발</a></li>
+                    <li><a href="#">테마여행</a></li>
+                    <li><a href="#">맞춤여행</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">국내여행추천</a>
+                <ul class="submenu">
+                    <li><a href="#">여수</a></li>
+                    <li><a href="#">부산</a></li>
+                    <li><a href="#">경주</a></li>
+                    <li><a href="#">전주</a></li>
+                    <li><a href="#">수원</a></li>
+                    <li><a href="#">서울</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
     
+    <div class="bodywrap">
+        <div class="imgslide">
+            <a href="#"><img src="./GONOW_img/main01.png" alt="메인슬라이드"></a>
+            <a href="#"><img src="./GONOW_img/main02.png" alt="메인슬라이드"></a>
+            <a href="#"><img src="./GONOW_img/main03.png" alt="메인슬라이드"></a>
+            <a href="#"><img src="./GONOW_img/main04.png" alt="메인슬라이드"></a>
+            <a href="#"><img src="./GONOW_img/main05.png" alt="메인슬라이드"></a>
+            <a href="#"><img src="./GONOW_img/main06.png" alt="메인슬라이드"></a>
+        </div>
+        <div id="pannal">
+            <ul>
+                <li><img src="./GONOW_img/버스투어.png" alt="버스투어"></li>
+                <li class="subject">버스투어</li>
+            </ul>
+            <ul>
+                <li><img src="./GONOW_img/소도시특가.png" alt="소도시특가"></li>
+                <li class="subject">소도시특가</li>
+            </ul>
+            <ul>
+                <li><img src="./GONOW_img/수수료면제.png" alt="수수료면제"></li>
+                <li class="subject">수수료면제</li>
+            </ul>
+            <ul>
+                <li><img src="./GONOW_img/이달의혜택.png" alt="이달의혜택"></li>
+                <li class="subject">이달의혜택</li>
+            </ul>
+            <ul>
+                <li><img src="./GONOW_img/한인민박.png" alt="한인민박"></li>
+                <li class="subject">한인민박</li>
+            </ul>
+            <ul>
+                <li><img src="./GONOW_img/해외여행.png" alt="해외여행"></li>
+                <li class="subject">해외여행</li>
+            </ul>
+        </div>
+        <div class="adver">
+            <h3>어디로 떠나볼까?</h3>
+            <div id="flag">
+                <ul>
+                    <li>삿포로</li>
+                    <li>오사카</li>
+                    <li>나트랑</li>
+                    <li>괌</li>
+                </ul>
+            </div>
+            <div id="Hotelimg">
+                <a href="#"><img src="./GONOW_img/Hotel1.jpg" alt="호텔이미지"></a>
+                <ul class="info">
+                    <li>오사카 4성급</li>
+                    <li>호텔 포르자 오사카 난바 도톤보리</li>
+                    <li>4.8(2,105개)</li>
+                    <li>158,400</li>
+                </ul>
+                <a href="#"><img src="./GONOW_img/Hotel2.jpg" alt="호텔이미지"></a>
+                <ul class="info">
+                    <li>오사카 3성급</li>
+                    <li>온야도 노노 난바 내추럴 핫 스프링</li>
+                    <li>4.6(3,247개)</li>
+                    <li>182,500</li>
+                </ul>
+                <a href="#"><img src="./GONOW_img/Hotel3.jpg" alt="호텔이미지"></a>
+                <ul class="info">
+                    <li>오사카 5성급</li>
+                    <li>콘래드 오사카</li>
+                    <li>4.9 (890개)</li>
+                    <li>589,000</li>
+                </ul>
+                <a href="#"><img src="./GONOW_img/Hotel5.jpg" alt="호텔이미지"></a>
+                <ul class="info">
+                    <li>상품코드 : GN-OSK-001</li>
+                    <li>오사카/교토 3박 4일 미식 & 감성투어</li>
+                    <li>4.5 (560개)</li>
+                    <li>899,000</li>
+                </ul>
+            </div>
+        </div>
+        <div class="active">
+            <a href="#">공지사항</a>
+            <div class="notice">
+                <ul>
+                    <li class="open-modal"><a href="#">[필독] 시스템 정기 점검 및 서비스 일시 중단 안내</a><span>2026-01-25</span>
+                    </li>
+                    <li><a href="#">[항공] 대한항공/아시아나 마일리지 적립 기준 변경 안내</a><span>2026-01-17</span></li>
+                    <li><a href="#">[안내] 2026년 설 연휴 고객센터 운영 시간 및 예약 안내</a><span>2026-01-23</span></li>
+                    <li><a href="#">[안전] 동남아 주요 관광지 입국 시 필수 준비 서류 목록</a><span>2026-01-28</span></li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+
+    <div id="modal" aria-hidden="true">
+        <div class="modal_up" role="dialog" aria-modal="true">
+            <div class="uptitle">공지사항 안내</div>
+            <div class="upbody">
+                <h2>시스템 점검 및 <br> 서비스 일시 중단안내</h2> <br>
+                <p>더 나은 서비스 제공을 위해 시스템 점검을 진행합니다. <br>
+            점검 시간 동안 홈페이지 내 예약 및 결제 서비스가<br> 일시 중단되오니,
+            이용에 착오 없으시길 바랍니다.<br></p>
+            </div>
+            <div class="btn" id="closeBtn">닫기</div>
+            
+        </div> <!--modal up 마감-->
+    </div><!--modal 마감-->
+
+    <footer id="footer">
+    <div class="footer_inner">
+        <div class="footer_top">
+            <div class="f_links">
+                <a href="#">회사소개</a>
+                <a href="#">이용약관</a>
+                <a href="#"><strong>개인정보처리방침</strong></a>
+                <a href="#">여행약관</a>
+                <a href="#">고객센터</a>
+            </div>
+            <div class="f_cs">
+                <p>고객행복센터 <strong>1588-0000</strong> <span>(평일 09:00~18:00)</span></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer_bottom">
+            <div class="f_info">
+                <p>
+                    (주)고나우여행사 | 대표자 : 정재희 | 주소 : 서울특별시 중구 세종대로 110 고나우빌딩 10층<br>
+                    사업자등록번호 : 123-45-67890 | 통신판매업신고 : 제 2026-서울중구-0123호 | 관광사업자등록 : 제2026-000001호<br>
+                    개인정보보호책임자 : 정재희 | 이메일 : help@gonow.co.kr
+                </p>
+                <p class="f_msg">
+                    (주)고나우는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 해당 판매자에게 있습니다.
+                </p>
+                <p class="copy">Copyright ⓒ 2026 GONOW Travel All rights reserved.</p>
+            </div>
+            
+            <div class="f_sns">
+                <span>Instagram</span>
+                <span>Facebook</span>
+                <span>Blog</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

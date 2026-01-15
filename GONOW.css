@@ -1,0 +1,585 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "맑은 고딕",sans-serif;
+    color:#333;
+}
+body{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+}
+header{
+    width: 1200px;
+    height: 100px;
+}
+.top{
+    width: 1200px;
+    height: 100px;
+}
+.logo{
+    float: left;
+    width: 250px;
+    height: 100px;
+    margin-left: 5px; /* 왼쪽으로 이동 */
+}
+.logo img {
+    width: 240px;      /* 로고 크기 확대 */
+    height: auto;      /* 비율 유지 */
+    margin: 28px 0 0 6px; /* 상단 여백 유지, 왼쪽으로 이동 */
+}
+.gnb{
+    float: right;
+    width: 800px;
+    height: 100px;
+    position:relative;
+    z-index: 10;
+}
+#menu{
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+}
+#menu li{
+    display: inline-block;
+}
+#menu li a{
+    color: black;
+}
+#top_menu li a{
+    color: lightgray;
+    text-decoration: none;
+}
+
+#main_menu li{
+    margin: 50px 0 0 80px;
+    font-family: "맑은 고딕";
+    font-weight: bold;
+    font-size: 20px;
+    color:black;
+}
+/* 메인 메뉴(navi) 스타일 수정 */
+.navi {
+    float: left;
+    margin-top: 65px; /* 헤더 위치에 맞게 조정 */
+    margin-left: 14px;
+}
+
+.navi > li {
+    float: left;
+    position: relative;
+}
+
+/* 숙소, 투어&티켓 등 메인 텍스트 설정 */
+.navi > li > a {
+    display: block;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px; /* 가독성을 위해 살짝 키움 */
+    font-weight: bold;
+    text-decoration: none;
+    
+    /* [수정] 평소에는 검정색 */
+    color: #000000; 
+    transition: all 0.3s;
+}
+
+/* [수정] 마우스 올렸을 때(클릭 전 단계) 글자색 흰색으로 변경 */
+.navi > li:hover > a {
+    color: #ffffff; 
+    background-color: #001a4d; /* 서브메뉴와 같은 진한 남색으로 통일 */
+    border-radius: 5px 5px 0 0; /* 위쪽 모서리만 둥글게 */
+}
+
+/* 서브메뉴 위치 및 간격 미세 조정 */
+.submenu {   
+    position: absolute;
+    left: 0;
+    top: 40px; /* 메인 메뉴 바로 아래 붙도록 설정 */
+    display: none;
+    z-index: 1000;
+    white-space: nowrap; 
+    padding: 0;
+}
+
+.submenu > li > a {
+    display: block;
+    min-width: 150px;
+    height: 45px;
+    width: 180px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #001a4d; /* 진한 남색 */
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+/* 서브메뉴 내 글자 호버 효과 */
+.submenu > li > a:hover {
+    color: #ffeb3b; /* 서브메뉴 글자는 노란색 포인트 */
+}
+
+/* 마지막 항목 경계선 제거 */
+.submenu > li:last-child > a {
+    border-right: none;
+}
+.btn {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: #ccc;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* input을 인라인 블록으로 만들어 로고에서 떨어뜨림 (약 3cm ≈ 115px) */
+#where {
+    display: inline-block;
+    width: 280px;
+    padding: 8px 12px;
+    font-size: 15px;
+    margin-left: 115px; /* 로고에서 대략 3cm 떨어지게 */
+    margin-top: 48px;
+}
+
+/* .gnb 최상위 메뉴 간격 넓히기 */
+.gnb ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gnb ul > li {
+    display: inline-block;
+    margin-right: 50px; /* 항목 간격을 넉넉히 */
+    margin-top: 30px;
+    position: relative;
+}
+.gnb ul > li > a.mainnav {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    padding: 6px 4px;
+}
+.bodywrap{
+    width: 1200px;
+}
+/* 1. 슬라이드 영역 높이 조절 */
+.imgslide {
+    width: 1200px;
+    height: 300px; /* 기존 300px에서 예시 이미지처럼 높게 변경 */
+    position: relative;
+    overflow: hidden;
+}
+
+.imgslide > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height: 550px;
+}
+
+.imgslide img {
+    width: 1200px;
+    height: 100%;       /* 부모 높이에 맞춤 */
+    display: block;
+}
+
+/* 2. 메뉴 판넬 슬라이드에 걸치게 배치 */
+#pannal {
+    width: 1050px;           /* 예시처럼 살짝 안으로 들어온 너비 */
+    margin: -70px auto 50px; /* 마이너스 마진으로 슬라이드 위로 약 70px 겹침 */
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 15px;      /* 상하좌우 여백 */
+    border-radius: 15px;     /* 예시처럼 부드러운 곡선 */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* 판넬이 떠 있는 느낌의 그림자 */
+    position: relative;
+    z-index: 100;            /* 슬라이드(img)보다 위에 오도록 설정 */
+}
+
+#pannal > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+}
+#pannal >ul:hover{
+    transform: translateY(-10px); /* 마이너스(-) 값이 위쪽 방향입니다! */
+    transition: transform 0.3s ease;}
+/* 아이콘 배경 원형 처리 */
+#pannal > ul > li:first-child {
+    width: 65px;
+    height: 65px;
+    background-color: #f8f9fa; /* 예시 이미지의 연한 회색 배경 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+#pannal > ul > li img {
+    width: 40px;
+    height: auto;
+}
+
+/* 텍스트 스타일 */
+#pannal .subject {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* 글자가 줄바꿈되지 않게 */
+}
+/* 어디로 떠나볼까? 전체 컨테이너 */
+.adver {
+    width: 1200px;
+    margin: 80px auto;
+}
+
+.adver h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+/* 탭 메뉴 스타일 */
+#flag ul {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 35px;
+    padding-left: 10px;
+}
+
+#flag li {
+    padding: 10px 20px;
+    border: 1px solid #eee;
+    border-radius: 25px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#flag li:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* 핵심: 4열 그리드 시스템 */
+#Hotelimg {
+    display: grid;
+    /* 1200px 안에서 4개의 열을 동일한 비율로 생성 (간격 20px) */
+    grid-template-columns: repeat(4, 1fr); 
+    column-gap: 20px; 
+    row-gap: 40px;   /* 줄 바꿈 시 생기는 세로 간격 */
+    padding: 0 10px;
+}
+
+/* 이미지 스타일 */
+#Hotelimg a {
+    display: block;
+    width: 100%;
+}
+
+#Hotelimg img {
+    width: 100%;
+    height: 200px; /* 고정 높이 */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+#Hotelimg img:hover {
+    transform: scale(1.03); /* 이미지 마우스 올리면 살짝 커짐 */
+}
+
+/* 호텔 정보 텍스트 (이미지 바로 밑에 붙음) */
+.info {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info li {
+    list-style: none;
+    line-height: 1.4;
+}
+
+/* 지역 및 등급 */
+.info li:nth-child(1) {
+    font-size: 13px;
+    color: #888;
+}
+
+/* 호텔/패키지 이름 */
+.info li:nth-child(2) {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    /* 이름이 길어질 경우 두 줄까지만 표시하고 말줄임 처리 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 44px; 
+}
+
+/* 평점 및 리뷰수 (핑크색 포인트) */
+.info li:nth-child(3) {
+    font-size: 14px;
+    color: #ff4b8d;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* 가격 강조 */
+.info li:nth-child(4) {
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+    margin-top: 5px;
+}
+
+.info li:nth-child(4)::after {
+    content: "원";
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 2px;
+}
+/* 전체 컨테이너 */
+.notice {
+    width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #b56a6a;
+    border-radius: 8px;
+}
+
+/* 상단 '공지사항' 타이틀 스타일 */
+.active > a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+    text-decoration: none;
+}
+
+/* 리스트 스타일 제거 */
+.notice a {
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+/* 각 공지사항 항목 (한 줄) */
+.notice ul li {
+    display: flex;
+    justify-content: space-between; /* 제목은 왼쪽, 날짜는 오른쪽 */
+    align-items: center;
+    padding: 12px 5px;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background-color 0.2s;
+}
+
+.notice ul li:hover {
+    background-color: #f9f9f9;
+}
+
+/* 공지사항 제목 링크 */
+.notice ul li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+    /* 제목이 너무 길어질 경우 말줄임 처리 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%; 
+}
+
+/* 필독 등 강조 문구 색상 변경 (선택사항) */
+.notice ul li a:contains("[필독]") {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* 날짜 스타일 */
+.notice ul li span {
+    font-size: 14px;
+    color: #999;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 마지막 항목 선 제거 */
+.notice ul li:last-child {
+    border-bottom: none;
+}
+#modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 9999;
+}
+
+#modal.active {
+    display: block;
+}
+
+.modal_up {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
+
+.uptitle {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upbody {
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+#footer {
+    width: 100%;
+    background-color: #fcfcfc; /* 아주 연한 회색으로 깨끗하게 */
+    padding: 60px 0;           /* 위아래 여백을 넓게 */
+    margin-top: 100px;
+    border-top: 1px solid #eee;
+    clear: both;               /* float 해제용 */
+}
+
+.footer_inner {
+    width: 1100px;             /* 1200px보다 살짝 좁게 잡아 내부 여백 확보 */
+    margin: 0 auto;            /* 중앙 정렬 */
+}
+
+/* 상단 영역: 메뉴와 고객센터 */
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;     /* 고객센터 번호와 메뉴 하단 맞춤 */
+    padding-bottom: 30px;
+}
+
+.f_links {
+    display: flex;
+    gap: 25px;                 /* 메뉴 간격 */
+}
+
+.f_links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 개인정보처리방침 강조 */
+.f_links a strong {
+    color: #222;               /* 너무 튀지 않으면서 진하게 */
+    font-weight: 700;
+}
+
+.f_cs {
+    text-align: right;
+}
+
+.f_cs p {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.f_cs strong {
+    font-size: 26px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 구분선: 길이를 조절해 여백 느낌 주기 */
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+/* 하단 정보 영역 */
+.footer_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.f_info {
+    max-width: 850px;          /* 텍스트가 너무 퍼지지 않게 너비 제한 */
+}
+
+.f_info p {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.8;          /* 줄 간격을 넓혀 시원하게 */
+    margin-bottom: 10px;
+}
+
+/* 하단 저작권 및 면책 공고 */
+.f_msg, .copy {
+    font-size: 11px !important;
+    color: #bbb !important;
+}
+
+/* SNS 영역 여백 */
+.f_sns {
+    display: flex;
+    gap: 15px;
+}
+
+.f_sns span {
+    font-size: 12px;
+    color: #888;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.f_sns span:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}

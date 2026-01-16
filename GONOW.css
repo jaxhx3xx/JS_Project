@@ -31,13 +31,6 @@ header{
     height: auto;      /* 비율 유지 */
     margin: 28px 0 0 6px; /* 상단 여백 유지, 왼쪽으로 이동 */
 }
-.gnb{
-    float: right;
-    width: 800px;
-    height: 100px;
-    position:relative;
-    z-index: 10;
-}
 #menu{
     float: right;
     text-align: right;
@@ -46,9 +39,9 @@ header{
 #menu li{
     display: inline-block;
 }
-#menu li a{
+/* #menu li a{
     color: black;
-}
+} */
 #top_menu li a{
     color: lightgray;
     text-decoration: none;
@@ -324,7 +317,7 @@ header{
 
 .info li {
     list-style: none;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 /* 지역 및 등급 */
@@ -425,6 +418,9 @@ header{
 .notice ul li a:contains("[필독]") {
     font-weight: bold;
     color: #e74c3c;
+}
+.notice ul li a:hover{
+    font-weight: bold;
 }
 
 /* 날짜 스타일 */

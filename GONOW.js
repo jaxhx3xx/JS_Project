@@ -23,6 +23,13 @@ $(function () {
 
   $(".notice .open-modal").click(function (e) {
     e.preventDefault();
+    var index = $(this).data("index");
+
+    // 모든 모달 콘텐츠 숨기기
+    $(".modal-content").hide();
+    // 클릭한 인덱스의 콘텐츠만 표시
+    $(".modal-content[data-index='" + index + "']").show();
+
     $("#modal").addClass("active").attr("aria-hidden", "false");
   });
   $("#closeBtn").click(function (e) {
